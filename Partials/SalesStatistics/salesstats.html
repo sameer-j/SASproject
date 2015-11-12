@@ -1,0 +1,35 @@
+<div class="customMainContent" >
+    <h1 class="page-header">Sales Statistics</h1>
+
+    <div class="container-fluid">
+        <div class="row">
+            <form class="navbar-form navbar-left">
+                <input type="text" class="form-control" placeholder="Search..." ng-model="searchName"/>
+            </form>
+        </div>
+        <div class="row">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Qty Sold</th>
+                        <th>SalesValue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="data in salesStats.stats | filter:searchName">
+                        <td>{{data._id}}</td>
+                        <td>{{data.value.qty}}</td>
+                        <td>{{data.value.sales_value}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row">
+            <div class = "col-lg-3 col-lg-offset-9">
+                <p>Total Sales Value: {{salesStats.totalSalesValue}}</p>
+                <p>Total Item Sold:{{salesStats.totalQtySold}}</p>
+            </div>
+        </div>
+    </div>
+</div>

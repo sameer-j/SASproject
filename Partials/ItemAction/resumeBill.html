@@ -1,0 +1,19 @@
+<div class="customMainContent" >
+    <h1 class="page-header">Resume Billing</h1>
+
+    <div>
+        <form name="SearchForm" novalidate>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <input type="text" class="form-control" placeholder="Search..." ng-model="searchOrder"/>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <button id="btnSearchBill" type="submit" tabindex="11" class="btn btn-primary" ng-disabled="SearchForm.$error.required" ng-click="getOrder(searchOrder)">Search Order</button>
+                    </div>
+                </div>
+                <span style="color:red">{{errormessage}}</span>        
+            </div>
+        </form>
+    </div>
+</div>

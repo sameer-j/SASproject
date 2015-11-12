@@ -1,0 +1,57 @@
+<html ng-app="sasApp">
+<head>
+	<title>Supermarket Automation System</title>
+	<link rel="stylesheet" href="Resources/css/bootstrap.min.css">
+	<link rel="stylesheet" href="Resources/css/CustomStyle.css">
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top " ng-include="'Partials/Shared/Header.html'" >
+		
+	</nav>
+
+	<div class="container-fluid">
+		<div class="row" ng-show="Authorised">
+
+			<aside ng-include="'Partials/Shared/LeftPanelSalesClerk.html'" ng-if="Role == 'sales_clerk'"></aside>
+			<aside ng-include="'Partials/Shared/LeftPanelManager.html'" ng-if="Role == 'manager'"></aside>
+			<aside ng-include="'Partials/Shared/LeftPanelStockManager.html'" ng-if="Role == 'stock_manager'"></aside>
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-view="" ></div>
+			</div>
+		</div>
+		<div ng-hide="Authorised">
+			<h1>You are not authorised to view this page</h1>
+		</div>
+	</div>
+
+	
+	<!-- Resources -->
+	<script src="Resources/ExtLibs/jquery.min.js" type="text/javascript" ></script>
+	<script src="Resources/ExtLibs/angular.js" type="text/javascript" ></script>
+	<script src="Resources/ExtLibs/bootstrap.js" type="text/javascript" ></script>
+	<script src="Resources/ExtLibs/ng-route.js" type="text/javascript" ></script>
+
+	<!-- Config -->
+	<script src="Config/config.js" type="text/javascript" ></script>
+
+	<!-- Controllers -->
+	<script src="Controllers/LoginController/loginController.js" type="text/javascript" ></script>
+	<script src="Controllers/LogoutController/logoutController.js" type="text/javascript" ></script>
+	<script src="Controllers/ItemActionController/addItemController.js" type="text/javascript" ></script>
+	<script src="Controllers/ItemActionController/listItemController.js" type="text/javascript" ></script>
+	<script src="Controllers/ItemActionController/billItemController.js" type="text/javascript" ></script>
+	<script src="Controllers/ItemActionController/payBillController.js" type="text/javascript" ></script>
+	<script src="Controllers/SalesStatsController/salesStatsController.js" type="text/javascript" ></script>
+
+	<!-- Services -->
+	<script src="Services/ItemActionServices/addItemService.js" type="text/javascript" ></script>
+	<script src="Services/ItemActionServices/updateItemService.js" type="text/javascript" ></script>
+	<script src="Services/ItemActionServices/deleteItemService.js" type="text/javascript" ></script>
+	<script src="Services/ItemActionServices/billItemService.js" type="text/javascript" ></script>
+	<script src="Services/salesStatsService.js" type="text/javascript" ></script>
+	<script src="Services/CustomerActionServices/customerService.js" type="text/javascript" ></script>
+	<script src="Services/loginService.js" type="text/javascript" ></script>
+	<script src="Services/ItemActionServices/listItemService.js" type="text/javascript" ></script>
+	
+</body>
+</html>

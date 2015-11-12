@@ -1,0 +1,81 @@
+[{"id": {
+     "Username":"J",
+     "firstName": "Jon",
+     "lastName": "Snow",
+     "age": "25",
+     
+     "address":
+     {
+         "city": "Castle Black",
+         "state": "North",
+         "postalCode": "403601"
+     },
+     "attendance":
+         {
+           "days_present": "100",
+           "days_absent": "12",
+           "working_days": "240"
+         }
+   
+ }
+},{"id": {
+    "Username":"D",
+     "firstName": "Daenaerys",
+     "lastName": "Targyarean",
+     "age": "25",
+     
+     "address":
+     {
+         "city": "Meereen",
+         "state": "Misty mountains",
+         "postalCode": "403634"
+     },
+     "attendance":
+         {
+           "days_present": "102",
+           "days_absent": "10",
+           "working_days": "240"
+         }
+   
+ }
+},{"id": {
+    "Username":"T",
+     "firstName": "Tyrion",
+     "lastName": "Lannister",
+     "age": "25",
+     
+     "address":
+     {
+         "city": "Courthouse",
+         "state": "King's landing",
+         "postalCode": "403601"
+     },
+     "attendance":
+         {
+           "days_present": "100",
+           "days_absent": "12",
+           "working_days": "240"
+         }
+   
+ }
+},{"id": {
+    "Username":"S",
+     "firstName": "Stannis",
+     "lastName": "Baratheon",
+     "age": "40",
+     
+     "address":
+     {
+         "city": "Braavos",
+         "state": "Valar",
+         "postalCode": "403601"
+     },
+     "attendance":
+         {
+           "days_present": "100",
+           "days_absent": "12",
+           "working_days": "240"
+         }
+   
+ }
+}]

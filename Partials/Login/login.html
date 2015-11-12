@@ -1,0 +1,27 @@
+<div class="customMainContent" >
+    <h1 class="page-header">Login</h1>
+
+    <div>
+        <form name="LoginForm" novalidate>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        Username:<input id="txtUsername" type="text" tabindex="3" class="form-control" placeholder="Your Username" ng-model="User.Username" required autofocus />
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        Password:<input id="txtPassword" type="password" tabindex="4" class="form-control" placeholder="Enter your Password" ng-model="User.Password" required />
+                    </div>
+                </div>
+                
+                <br />
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <button id="btnSaveUser" type="submit" tabindex="11" class="btn btn-primary" ng-disabled="LoginForm.$error.required" ng-click="login(User)">Login</button>
+                    </div>
+                </div>
+                <span style="color:red">{{errormessage}}</span>        
+            </div>
+        </form>
+    
+    </div>
+</div>

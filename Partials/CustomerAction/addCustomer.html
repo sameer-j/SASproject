@@ -1,0 +1,75 @@
+<div class="customMainContent" >
+    <h1 class="page-header">Add New Customer</h1>
+    <div>
+        <form name="CustomerDetailsForm" >
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                         Customer Id:<input id="txtId" name="txtId" required="" type="text" tabindex="1" class="form-control" placeholder="Enter emp id" ng-model="User.emp_id" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                         Customer Name:<input id="txt" name="txtName1" required="" type="text" tabindex="1" class="form-control" placeholder="Enter name" ng-model="User.emp_name" />
+                    </div>
+                </div>
+                <br/>
+                 <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                         Username:<input id="txtName1" name="txtName1" required="" type="text" tabindex="1" class="form-control" placeholder="Enter username" ng-model="User.username" />
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        Date of birth:<input id="txtdob" type="text" tabindex="3" class="form-control" placeholder="Enter dob" ng-model="User.dob"/>
+                    </div>
+                </div>
+               
+                <br/>
+                <div class="row">
+                    <div class=" col-md-3 col-sm-6">
+                        City:<input type="text" id="txtCity" tabindex="4" class="form-control" placeholder="Enter your City"  ng-model="User.City"></textarea>
+                    </div>
+                </div>
+                 <div class="row">
+                    <div class=" col-md-3 col-sm-6">
+                        State:<input type="text" id="txtState" tabindex="5" class="form-control" placeholder="Enter your address"  ng-model="User.State"></textarea>
+                    </div>
+                </div>
+                 <div class="row">
+                    <div class=" col-md-3 col-sm-6">
+                        Pin:<input type="text" id="txtPin" tabindex="6" class="form-control" placeholder="Enter PIN"  ng-model="User.Pin"></textarea>
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        Gender:
+                            <select id="ddlGender" tabindex="7" class="form-control" ng-model="User.Gender">
+                                <option value="">Select Gender</option>
+                                <option value="1">Female</option>
+                                <option value="2">Male</option>
+                            </select>
+                    </div>
+                </div>
+
+                <br />
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <button id="btnSaveUser" type="submit" tabindex="8" class="btn btn-primary" data-ng-disabled="CustomerDetailsForm.$error.required" ng-click="addingCustomer(User)" >Save</button>
+                        <button id="btnReset" type="reset" tabindex="9" class="btn btn-danger">Reset</button>
+                        <button id="btnBack" type="button" tabindex="10" class="btn btn-info" ng-click="Back()">Cancel</button>
+                    </div>
+                </div>        
+            </div>
+        </form>
+
+        <div ng-show="addresponse != ''" my-shared-scope>
+          
+        </div>
+    
+    </div>
+    
+    
+</div>

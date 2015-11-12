@@ -1,0 +1,53 @@
+<div class="customMainContent" >
+    <h1 class="page-header">Bill Payment</h1>
+
+    <div class="container-fluid">
+        <div class="row">
+            <form class="navbar-form navbar-left">
+                <label class="col-lg-3">Bill No. : {{salesOrder.bill_no}}</label>
+                <label class="col-lg-3">Customer Name : {{salesOrder.customer.name}}</label>
+                <label class="col-lg-3">Date: {{salesOrder.bill_date.toDateString()}}</label>
+                <div class="col-lg-3" >
+                    <a href="" ng-hide="paid">
+                        <button id="btnPayBill" type="submit" tabindex="1" class="btn btn-primary" ng-click="payBill()">
+                            Pay
+                        </button>
+                    </a>
+                    <label ng-show="paid">Bill paid. Thank you.</label>
+                    <a href="#/SalesClerk/Bill" ng-show="paid">
+                        <button id="btnNewBill" type="submit" tabindex="1" class="btn btn-primary">
+                            New
+                        </button>
+                    </a>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Item Code</th>
+                        <th>Name</th>
+                        <th>Unit Price</th>
+                        <th>Qty</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="data in salesOrder.order_items">
+                        <td>{{data.item_code}}</td>
+                        <td>{{data.item_name}}</td>
+                        <td>{{data.selling_price}}</td>
+                        <td>{{data.qty}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row">
+            <div class = "col-lg-3 col-lg-offset-9">
+                <p>Net Amount: {{net_amount}}</p>
+                <p>Discount:(%{{salesOrder.discount_percent}}) {{salesOrder.discount_amount}}</p>
+                <p>Net Payable Amount: {{salesOrder.net_amount_payable}}</p>
+            </div>
+        </div>
+    </div>
+</div>

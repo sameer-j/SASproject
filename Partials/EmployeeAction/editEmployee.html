@@ -1,0 +1,76 @@
+<div class="customMainContent" >
+    <h1 class="page-header">Edit Student Details</h1>
+
+    <div>
+        <form name="StudentDetailsForm" >
+            <div class="container-fluid">
+
+                <h4>Edit Details for {{name1}} {{name2}}</h4>
+
+                <!-- <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        First Name:<input id="txtName1" value="'{{name1}}'" name="txtName1" required="" tabindex="1" type ="text" class="form-control" ng-model="User.FirstName">{{name1}}</label>
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        Last Name:<input id="txtName2" value="{{name2}}" name="txtName2" required="" type="text" tabindex="2" class="form-control" ng-model="User.LastName" />
+                    </div>
+                </div>
+                <br/> -->
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        Age:<input id="txtAge" type="text" tabindex="3" class="form-control" placeholder="Enter your age" ng-model="User.Age"/>
+                    </div>
+                </div>
+               
+                <br/>
+                <div class="row">
+                    <div class=" col-md-3 col-sm-6">
+                        City:<input type="text" id="txtCity" tabindex="4" class="form-control" placeholder="Enter your City"  ng-model="User.City"></textarea>
+                    </div>
+                </div>
+                 <div class="row">
+                    <div class=" col-md-3 col-sm-6">
+                        State:<input type="text" id="txtState" tabindex="5" class="form-control" placeholder="Enter your address"  ng-model="User.State"></textarea>
+                    </div>
+                </div>
+                 <div class="row">
+                    <div class=" col-md-3 col-sm-6">
+                        Pin:<input type="text" id="txtPin" tabindex="6" class="form-control" placeholder="Enter your address"  ng-model="User.Pin"></textarea>
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        Gender:
+                            <select id="ddlGender" tabindex="7" class="form-control" ng-model="User.Gender">
+                                <option value="">Select Gender</option>
+                                <option value="1">Female</option>
+                                <option value="2">Male</option>
+                            </select>
+                    </div>
+                </div>
+
+                <br />
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <button id="btnSaveUser" type="submit" tabindex="8" class="btn btn-primary" data-ng-disabled="UserDetailsForm.$error.required" ng-click="editingUser(User)" >Save</button>
+                        <button id="btnReset" type="reset" tabindex="9" class="btn btn-danger">Reset</button>
+                        <button id="btnBack" type="button" tabindex="10" class="btn btn-info" data-ng-click="Back()">Cancel</button>
+                    </div>
+                </div>        
+            </div>
+        </form>
+        <br/>
+
+        <div ng-show="editresponse != ''" my-shared-scope>
+            <div></div>
+            <!-- <h4>User edited successfully</h4> -->
+        </div>
+    
+    </div>
+    
+    
+</div>

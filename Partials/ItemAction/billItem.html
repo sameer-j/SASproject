@@ -1,0 +1,65 @@
+<div class="customMainContent" >
+    <h1 class="page-header">Generate Bill</h1>
+
+    <div class = "container-fluid">
+      	<div class = "row">
+      		<form class="navbar-form navbar-left">
+      			<div class = "col-md-12">
+	            	<input id="txtMemId" name="txtMemId" required="" type="text" tabindex="1" class="form-control" placeholder="Enter Member Id" autofocus ng-model= "Customer.member_id" />
+	            	<button id="btnGetCustomer" type="submit" tabindex="1" class="btn btn-primary" ng-click="getCustomer(Customer.member_id)">
+	            		OK
+	            	</button>
+                    <span style="color:red">{{errormessage}}</span> 
+	            	<span ng-show="RegisteredCustomer">Customer Name: {{Customer.name}}</span>
+	            </div>
+	            <br/>
+                <br>
+	            <div class="col-md-12">
+	            	<input type="text" class="form-control" placeholder="Search..." ng-model="searchName"/>
+                    <button id="btnSave" type="submit" tabindex="1" class="btn btn-primary" ng-click="save()" ng-disabled="!RegisteredCustomer" ng-hide="Saved">
+                        Save
+                    </button>
+                    <a href="#/SalesClerk/PayBill" ng-show="Saved">
+                        <button id="btnBill" type="submit" tabindex="1" class="btn btn-primary">
+                            Proceed to Bill
+                        </button>
+                    </a>
+                    <button id="btnReset" type="reset" tabindex="1" class="btn btn-primary" ng-click="resetall()" ng-hide="Saved" >
+                        Reset All
+                    </button>
+                    <button id="btnNew" type="submit" tabindex="1" class="btn btn-primary" ng-click="resetall()" ng-show="Saved" >
+                        New
+                    </button>
+	            </div>
+    	</div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Item Code</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Unit Price</th>
+                    <th class = "col-xs-3">Qty</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr ng-repeat="data in mydata |filter:searchName">
+                    <td>{{data.item_code}}</td>
+                    <td>{{data.item_name}}</td>
+                    <td>{{data.category}}</td>
+                    <td>{{data.selling_price}}</td>
+                    <td ng-show="data.qty">
+                        <input id="txtQty" name="txtQty" required="" type="number" min="1" max="{{data.qty}}" tabindex="1" class="form-control" ng-model="qty" ng-init="qty=1" size = "1"/>
+                    </td>
+                    <td ng-hide="data.qty">
+                        OUT OF STOCK
+                    </td>         
+                    <td><button ng-click="AddToBill(data, qty)" ng-disabled="Saved || !data.qty" class="btn btn-primary">Add</button></td>
+                    <td><button ng-click="reset(data, qty)" ng-disabled="Saved || !data.qty" class="btn btn-primary">Reset</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    </div>
+</div>

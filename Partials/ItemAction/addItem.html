@@ -1,0 +1,59 @@
+<div class="customMainContent" >
+    <h1 class="page-header">Add New Item</h1>
+    <div>
+        <form name="ItemDetailsForm" >
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                         Item code:<input id="txtCode" name="txtCode" required="" type="text" tabindex="1" class="form-control" placeholder="Enter Item code" autofocus ng-model="Item.item_code" />
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                         Category:<input id="txtCategory" name="txtCategory" required="" type="text" tabindex="1" class="form-control" placeholder="Enter category" ng-model="Item.category" />
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                         Item name:<input id="txtName" name="txtName" required="" type="text" tabindex="1" class="form-control" placeholder="Enter Item name" ng-model="Item.item_name" />
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        Cost price:<input id="txtCp" name="txtCp" required="" type="number" tabindex="1" class="form-control" placeholder="Enter cost price" ng-model="Item.cost_price"/>
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        Selling price:<input id="txtSp" name="txtSp" required="" type="number" tabindex="1" class="form-control" placeholder="Enter selling price" ng-model="Item.selling_price"/>
+                    </div>
+                </div>
+                <br/>
+                 <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        Quantity:<input id="txtQty" name="txtQty" required="" type="number" tabindex="1" class="form-control" placeholder="Enter Quantity" ng-model="Item.qty"/>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <button id="btnSaveItem" type="submit" tabindex="8" class="btn btn-primary" data-ng-disabled="ItemDetailsForm.$error.required" ng-click="addingItem(Item)" >Save</button>
+                        <button id="btnReset" type="reset" tabindex="9" class="btn btn-danger">Reset</button>
+                        <button id="btnBack" type="button" tabindex="10" class="btn btn-info" ng-click="Back()">Cancel</button>
+                    </div>
+                </div>        
+            </div>
+        </form>
+
+        <div ng-show="addresponse != ''" my-shared-scope>
+          
+        </div>
+    
+    </div>
+    
+    
+</div>

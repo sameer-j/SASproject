@@ -1,0 +1,65 @@
+<div class="customMainContent" >
+    <h1 class="page-header">Add New Employee</h1>
+    <div>
+        <form name="EmployeeDetailsForm" >
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                         Employee Id:<input id="txtId" name="txtId" required="" type="text" tabindex="1" class="form-control" placeholder="Enter emp id" ng-model="Emp.emp_id" />
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                         Employee Name:<input id="txt" name="txtName1" required="" type="text" tabindex="1" class="form-control" placeholder="Enter name" ng-model="Emp.emp_name" />
+                    </div>
+                </div>
+                <br/>
+                 <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                         Username:<input id="txtName1" name="txtName1" required="" type="text" tabindex="1" class="form-control" placeholder="Enter username" ng-model="Emp.username" />
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        Date of birth:<input id="txtdob" type="text" tabindex="3" class="form-control" placeholder="Enter dob" ng-model="Emp.dob"/>
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        phone:<input id="txtphone" type="text" tabindex="3" class="form-control" placeholder="Enter phone" ng-model="Emp.phone_no"/>
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        Designation:
+                            <select id="ddlGender" tabindex="7" class="form-control" ng-model="Emp.designation">
+                                <option value="">Select Designation</option>
+                                <option value="manager">Manager</option>
+                                <option value="sales_clerk">Sales Clerk</option>
+                                <option value="stock_manager">Stock Manager</option>
+                            </select>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <button id="btnSaveEmp" type="submit" tabindex="8" class="btn btn-primary" data-ng-disabled="EmployeeDetailsForm.$error.required" ng-click="addingEmployee(Emp)" >Save</button>
+                        <button id="btnReset" type="reset" tabindex="9" class="btn btn-danger">Reset</button>
+                        <button id="btnBack" type="button" tabindex="10" class="btn btn-info" ng-click="Back()">Cancel</button>
+                    </div>
+                </div>        
+            </div>
+        </form>
+
+        <!-- <div ng-show="addresponse != ''" my-shared-scope>
+          
+        </div> -->
+    
+    </div>
+    
+    
+</div>

@@ -1,0 +1,35 @@
+- Login person name after login
+- Stock Manager: if New item added already exists, print appropriate msg to user
+- login: from database
+- Manager: implement simple sales statistics
+- Manager: add employee, may be list employee
+- remove extra alert and console messages
+- give new button in billing page(1st one)
+- discount amount msg
+- discount amount precision
+- qty decrease not working on paying
+- remove unnecessary files
+- host online
+
+
+done
+-------
+- add item, update list
+- deduct items from stock after paying only
+- unregistered customer msg not working properly
+- SalesClerk, allow only registered users
+- Out Of Stock, add button disable
+
+Extra
+------
+- cleanup code
+- running without server
+- host on website
+- readme file 
+
+Future Work
+------------
+- resume billing capability
+- rollback
+- Add customer
+- add employee

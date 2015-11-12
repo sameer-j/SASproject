@@ -1,0 +1,33 @@
+<div class="customMainContent" >
+    <h1 class="page-header">List of Students</h1>
+
+    <div class="table-responsive">
+      <form class="navbar-form navbar-left">
+            <input type="text" class="form-control" placeholder="Search By Name" ng-model="searchName">
+        </form>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                   
+                    <th>Name</th>
+                    <th>No of working days</th>
+                    <th>No of days Present</th>
+                    <th>No of days Absent</th>
+                   
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr ng-repeat="data in mydata |filter:searchName">
+                    <td align="center"><a href="#/Student/Details" ng-click="getDetails(data.id.firstName,data.id.lastName,data,data.id.Username)">{{data.id.firstName}} {{data.id.lastName}}</a></td>
+                    <td align="center">{{data.id.attendance.working_days}}</td>
+                    <td align="center">{{data.id.attendance.days_present}}</td>
+                    <td align="center">{{data.id.attendance.days_absent}}</td>       
+                    <td align="center"><a href="#/Admin/edit" ng-click="getDetails(data.id.firstName,data.id.lastName,data,data.id.Username)"><button>Edit Details</button></a></td>
+                    <td align="center"><a href="#/Admin/delete" ng-click="getDetails(data.id.firstName,data.id.lastName,data,data.id.Username)"><button>Delete Student</button></a></td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+</div>
